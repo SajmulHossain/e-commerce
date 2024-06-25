@@ -1,0 +1,233 @@
+/* header section start */
+header {
+    background-color: #dcdde1;
+    padding: .7rem 0;
+}
+.header-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.header-search-container {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 2%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon:hover {
+    background-color: rgba(0, 0, 0, 0.216);
+    border-radius: 50%;
+}
+
+.search-btn {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.header-search-container input {
+    width: 100%;
+    padding: .6rem .8rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.authentication {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-row: 1/ span 1;
+    grid-column: 8/12;
+}
+
+.authentication button {
+    border: none;
+    background-color: transparent;
+    /* color: var(--main-color); */
+    color: #000;
+    font-weight: bold;
+}
+
+.vr-line {
+    width: 1px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.338);
+}
+
+
+
+.cart-icon {
+    grid-column: 12/ 13;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: var(--main-color);
+}
+/* header section end */
+
+/* main section start */
+
+main {
+    background-color: rgb(191, 137, 241);
+}
+
+/* product section start */
+
+.product-container {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    grid-template-columns: repeat( 2,1fr);
+    gap: .5rem;
+    padding: 1rem 0;
+}
+
+.products {
+    background-color: var(--main-color);
+    color: white;
+    position: relative;
+    margin-bottom: .5rem;
+    border-radius: 10px;
+}
+
+.products:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2),
+    -1px -1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.product-img {
+    border-radius: 10px 10px 0 0;
+}
+
+.product-img img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.product-desc {
+    padding: .8rem .5rem;
+}
+
+.product-name h3 {
+    font-size: 13px;
+    font-weight: 400;
+    max-height: 30px;
+    overflow: hidden;
+    line-height: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-bottom: 5px;
+}
+
+.ratings {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.708);
+}
+
+.rating-icon p i {
+    color: rgb(255, 217, 0);
+}
+
+.rating-circle {
+    height: 5px;
+    width: 5px;
+    background-color:  rgba(255, 255, 255, 0.708);
+    border-radius: 50%;
+}
+
+.product-price {
+    display: flex;
+    gap: 1rem;
+    margin-top: .8rem;
+    align-items: center;
+}
+
+.product-price p {
+    color: var(--sec-color);
+    font-weight: bold;
+}
+
+.product-price span {
+    font-size: 12px;
+}
+
+.product-button-section {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 1rem;
+}
+
+.product-button-section button {
+    border: none;
+    outline: none;
+    background-color: var(--sec-color);
+    color: var(--main-color);
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.product-button-section button:hover {
+    background-color: var(--main-color);
+    color: var(--sec-color);
+    border: 2px solid white;
+}
+
+/* product section end */
+
+/* main section end */
+
+
+
+/* footer section start */
+
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1.5rem 0;
+}
+
+.customer-care h3 {
+    margin-bottom: .3rem;
+}
+
+.customer-care a {
+    text-decoration: none;
+    color: var(--sec-color);
+}
+
+/* footer section end */
