@@ -46,11 +46,11 @@
                     <span>Quantity</span>
                     
                     <div class="q-input">
-                        <p class="reduce">-</p>
+                        <button class="reduce" id="reduce" onclick="reduceF()" disabled>-</button>
                     
-                        <input type="number" name="" id="" readonly value="1">
+                        <input type="number" name="" id="input" readonly value="1">
                    
-                    <p class="add">+</p>
+                    <button class="add" id="add" onclick="addF()">+</button>
                     </div>
                 </div>
 
@@ -65,9 +65,7 @@
 
                 <div class="location">
                     <div class="address">
-                        <p>
-                            <i class="fa-solid fa-location-dot"></i> Kachua,Maghadia,Mirsarai,Chattogram
-                        </p>
+                        <p><i class="fa-solid fa-location-dot"></i> Kachua,Maghadia,Mirsarai,Chattogram</p>
                     </div>
 
                     <div class="l-btn">
@@ -115,5 +113,7 @@
         </div>
     </footer>
     
+
+    <script src="app.js"></script>
 </body>
 </html>

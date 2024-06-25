@@ -78,10 +78,12 @@ main {
 }
 
 
-.quantity p {
+.quantity button {
+    border: none;
     font-size: 30px;
     padding: 0 15px;
     background-color: rgba(0, 0, 0, 0.378);
+    cursor: pointer;
 }
 
 .quantity input {
