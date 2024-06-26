@@ -570,6 +570,10 @@ video {
   right: 0.5rem;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -709,6 +713,16 @@ video {
 .bg-slate-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
+.bg-green-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
 }
 
 .p-2 {
