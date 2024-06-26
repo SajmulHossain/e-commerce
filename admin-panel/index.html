@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="root.css">
+</head>
+<body>
+
+    <!-- header section start -->
+
+    <header class="px-5 lg:flex lg:flex-col lg:items-center md:flex md:flex-col md:items-center sm:flex sm:flex-col sm:items-center">
+        <div class="flex  justify-between pt-3 lg:w-3/4 md:w-3/4 sm:w-3/4">
+            <div class="w-[50px] h-[50px] rounded-full overflow-hidden">
+                <img src="../images/logo.png" class="w-100" alt="">
+            </div>
+    
+            <nav class="lg:w-[30%] w-[65%] flex align-middle">
+                <ul class="list-none flex justify-between w-[100%] items-center flex-ali">
+                    <li><a class="hover:text-green-400" href="">Order</a></li>
+                    <li><a class="hover:text-green-400" href="">Statistics</a></li>
+                    <li><a class="hover:text-green-400" href="">Tracking</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- header section end -->
+
+    <!-- main section start -->
+
+    <main>
+        <div class="px-5 pt-5">
+            <div>
+                <h2 class="text-3xl font-bold text-center underline underline-offset-[5px] decoration-dashed">Admin Panel</h2>
+            </div>
+        <section class="flex flex-col items-center">
+            <div class="mt-4 lg:w-3/4 md:w-3/4">
+                <div class="hover:border-solid hover:shadow-2xl py-12 border-dashed border rounded-lg border-black text-center">
+                    <i class="fa-regular fa-images text-9xl text-cyan-300"></i>
+                    <h3 class="font-bold text-2xl mt-2 cursor-default">Drag & Drop</h3>
+                    <label for="image-input" class="text-green-700 cursor-pointer">Browse File</label>
+                    <input type="file" name="" id="image-input" accept=".jpg,.png,.jpeg" hidden>
+                </div>
+
+                <div>
+                    <div class="mt-5">
+                        <label for="p-name">Name</label>
+                        <input type="text" name="" id="p-name" class="border border-black w-full rounded-md mt-1 p-2 outline-none">
+                    </div>
+
+                    <div class="mt-5">
+                        <label for="p-desc">Description</label>
+                        <textarea name="" id="p-desc" class="w-full p-2 border border-black rounded-md mt-1"></textarea>
+                    </div>
+
+                    <div class="mt-5">
+                        <label for="feature">Feature</label>
+                        <div class="relative">
+                            <textarea name="" id="feature" class="w-full border border-black rounded-md mt-1 px-2 pt-2"></textarea>
+                        <div class="absolute right-2 bottom-0 my-auto -translate-y-1/2">
+                            <button class="bg-cyan-300 px-4 py-1 rounded-md">Add List</button>
+                        </div>
+                        </div>
+
+                        <div>
+                            <button class="bg-slate-400 px-5 rounded-md">Add Feature +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    
+
+        </div>
+    </main>
+
+    <!-- main section end -->
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
