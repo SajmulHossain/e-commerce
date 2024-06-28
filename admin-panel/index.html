@@ -59,23 +59,49 @@
                         <textarea name="" id="p-desc" class="w-full p-2 border border-black rounded-md mt-1" placeholder="Products description here....."></textarea>
                     </div>
 
+                    <div class="flex justify-between gap-4 mt-5">
+                        <div>
+                            <label for="price" class="block">Price</label>
+                            <input type="text" placeholder="Price (Taka)" id="price" class="border border-black rounded-md mt-1 p-2 w-full outline-none">
+                        </div>
+
+                        <div>
+                            <div>
+                                <label for="discount" class="block">Discount</label>
+                                <input type="text" id="discount" placeholder="Discount (%)" class="border border-black rounded-md w-full mt-1 p-2 outline-none">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="final-price" class="block">Final Price</label>
+                            <input type="text" id="final-price" value="0 Taka" class="border border-black rounded-md w-full mt-1 p-2 outline-none" disabled>
+                        </div>
+                    </div>
+
                     <div class="mt-5">
                         <label for="feature">Feature</label>
-                        <div class="relative">
-                            <textarea name="" id="feature" class="w-full border border-black rounded-md mt-1 px-2 pt-2" placeholder="Products feature heading here....."></textarea>
-                        <div class="absolute right-2 bottom-0 my-auto -translate-y-1/2">
-                            <button class="bg-cyan-300 px-4 py-1 rounded-md">Add List</button>
-                        </div>
+                        <div class="relative" id="featureId">
+                            <textarea name="" id="feature" class="w-full border border-black rounded-md mt-1 px-2 pt-2" placeholder="Feature heading here....."></textarea>
+                            <div class="absolute right-2 bottom-0 my-auto -translate-y-1/2">
+                                <button class="bg-cyan-300 px-4 py-1 rounded-md" id="listBlock">Add List</button>
+                            </div>
                         </div>
 
-                        <div class="flex gap-2 mb-2">
-                           <div class="w-[50%]">
-                            <input type="text" class="border p-2 border-black rounded-md w-full" placeholder="Feature list.....">
-                           </div>
+                        
+
+                        <div class="mb-2 hidden" id="featureList">
+
+                           <div class="flex gap-2 mb-2">
+                            <div class="w-1/2">
+                                <input type="text" class="border p-2 border-black rounded-md w-full" placeholder="Feature list.....">
+                            </div>
+                           
 
                             <div class="flex justify-center items-stretch">
-                                <button class="px-4 h-full w-full rounded-md text-3xl bg-cyan-300">+</button>
+                                <button class="px-4 h-full w-full rounded-md text-3xl bg-cyan-300" id="listAdd">+</button>
                             </div>
+                          </div>
+                          
                         </div>
 
                         <div>
