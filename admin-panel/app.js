@@ -28,32 +28,50 @@ function displayPrice() {
 function addList() {
     const listBtn = document.getElementById('listBlock');
     const list = document.getElementById('featureList');
-    const listAdd = document.getElementById('listAdd');
-    const div = document.createElement('div');
-    const input = document.createElement('input');
+    let listAdd = document.getElementById('listAdd');
+
     listBtn.addEventListener('click', function() {
         list.classList.remove('hidden');
-        // list.classList.add('flex','flex-col');
     });
 
-    listAdd.addEventListener("click", function() {
-        // div.classList.add('w-1/2');
-        // input.classList.add('border', 'p-2', 'border-black', 'rounded-md', 'w-full','block');
-        // div.appendChild(input);
-        // list.appendChild(div);
+    function addNewInput() {
+        const mainDiv = document.createElement('div');
+        mainDiv.classList.add("flex", "gap-2", "mb-2");
 
-        list.innerHTML = `<div class="flex gap-2 mb-2">
-                            <div class="w-1/2">
-                                <input type="text" class="border p-2 border-black rounded-md w-full" placeholder="Feature list.....">
-                            </div>
-                           
+        const childDiv = document.createElement('div');
+        childDiv.classList.add('w-1/2');
 
-                            <div class="flex justify-center items-stretch">
-                                <button class="px-4 h-full w-full rounded-md text-3xl bg-cyan-300" id="listAdd">+</button>
-                            </div>
-                          </div>`;
-    })
+        const input = document.createElement('input');
+        input.classList.add("border", "p-2", "border-black", "rounded-md", "w-full");
+        input.setAttribute('placeholder', 'Feature list.....');
+
+        mainDiv.appendChild(childDiv);
+        childDiv.appendChild(input);
+        list.appendChild(mainDiv);
+
+        const buttons = list.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.classList.add('hidden');
+        });
+
+        const btnDiv = document.createElement('div');
+        const button = document.createElement('button');
+        button.classList.add('px-4', 'h-full', 'w-full', 'rounded-md', 'text-3xl', 'bg-cyan-300');
+        button.setAttribute('id', 'listAdd');
+        button.innerText = '+';
+
+        btnDiv.appendChild(button);
+        mainDiv.appendChild(btnDiv);
+
+        listAdd = button;  
+        listAdd.addEventListener("click", addNewInput); 
+    }
+
+    listAdd.addEventListener("click", addNewInput);
 }
+
+
+
 
 main();
 
